@@ -1,0 +1,383 @@
+{
+  "generated_at": "2026-09-22T15:41:17.417580+00:00",
+  "recent_runs": [
+    {
+      "run_id": "run-20260922-154012-f345a3ac",
+      "started_at": "2026-09-22T15:40:22.878069+00:00",
+      "duration_s": 10.8,
+      "rows_in": {
+        "crypto": 100,
+        "weather": 960
+      },
+      "rows_silver": {
+        "crypto": 100,
+        "weather": 960
+      },
+      "rows_gold": {
+        "crypto_daily": 100,
+        "weather_hourly": 960
+      },
+      "quarantined": 0,
+      "tests_passed": 12,
+      "tests_failed": 0,
+      "tests_warned": 0,
+      "tests_skipped": 2,
+      "status": "success"
+    },
+    {
+      "run_id": "run-20260922-154029-102c87ce",
+      "started_at": "2026-09-22T15:40:40.804381+00:00",
+      "duration_s": 10.9,
+      "rows_in": {
+        "crypto": 100,
+        "weather": 960
+      },
+      "rows_silver": {
+        "crypto": 200,
+        "weather": 960
+      },
+      "rows_gold": {
+        "crypto_daily": 100,
+        "weather_hourly": 960
+      },
+      "quarantined": 0,
+      "tests_passed": 14,
+      "tests_failed": 0,
+      "tests_warned": 0,
+      "tests_skipped": 0,
+      "status": "success"
+    }
+  ],
+  "open_incidents": [
+    {
+      "timestamp": "2026-09-22T15:41:00.028492+00:00",
+      "run_id": "drill-drift-20260922-154042",
+      "severity": "warning",
+      "check": "schema_drift",
+      "details": "crypto: 'total_volume' renamed to 'volume_24h' on 40 records, new field 'fdv_v2' on 20 records \u2014 staging contract (COALESCE) applied"
+    },
+    {
+      "timestamp": "2026-09-22T15:40:55.391997+00:00",
+      "run_id": "drill-nullflood-20260922-154042",
+      "severity": "high",
+      "check": "not_null:silver_crypto.total_volume",
+      "details": "30 rows with NULL total_volume; 30 quarantined"
+    }
+  ],
+  "freshness": {
+    "crypto": {
+      "newest": "2026-09-22 15:37:10",
+      "age_hours": 0.07
+    },
+    "weather": {
+      "newest": "2026-09-22 15:40:31.319245",
+      "age_hours": 0.01
+    }
+  },
+  "samples": {
+    "gold_crypto_daily": [
+      {
+        "crypto_daily_sk": "2d9d70209460ab2892b81c5068b2d788",
+        "coin_id": "bitcoin",
+        "symbol": "btc",
+        "coin_name": "Bitcoin",
+        "market_date": "2026-09-22",
+        "open_price": "86317.0",
+        "close_price": "86330.0",
+        "low_price": "86317.0",
+        "high_price": "86330.0",
+        "avg_price": "86323.5",
+        "avg_volume": "46596888186.5",
+        "avg_market_cap": "1734146970219.0",
+        "change_24h_pct": "0.48994",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "6b818578703ba8b4ffa6e9fb37fb7c97",
+        "coin_id": "ethereum",
+        "symbol": "eth",
+        "coin_name": "Ethereum",
+        "market_date": "2026-09-22",
+        "open_price": "2745.01",
+        "close_price": "2744.99",
+        "low_price": "2744.99",
+        "high_price": "2745.01",
+        "avg_price": "2745.0",
+        "avg_volume": "18875188413.0",
+        "avg_market_cap": "335114399402.5",
+        "change_24h_pct": "0.19137",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "b9a2836d64dc04d8bb377471b4e49c25",
+        "coin_id": "tether",
+        "symbol": "usdt",
+        "coin_name": "Tether",
+        "market_date": "2026-09-22",
+        "open_price": "0.999878",
+        "close_price": "0.999867",
+        "low_price": "0.999867",
+        "high_price": "0.999878",
+        "avg_price": "0.9998724999999999",
+        "avg_volume": "83634857411.5",
+        "avg_market_cap": "183362937493.0",
+        "change_24h_pct": "0.00408",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "c39b8d2aef3b046de4c0fda3a528b56b",
+        "coin_id": "binancecoin",
+        "symbol": "bnb",
+        "coin_name": "BNB",
+        "market_date": "2026-09-22",
+        "open_price": "788.42",
+        "close_price": "788.46",
+        "low_price": "788.42",
+        "high_price": "788.46",
+        "avg_price": "788.44",
+        "avg_volume": "1450337798.5",
+        "avg_market_cap": "105003563093.0",
+        "change_24h_pct": "-1.78845",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "c92aa4f250d13801bd8d53330c7ec9b4",
+        "coin_id": "ripple",
+        "symbol": "xrp",
+        "coin_name": "XRP",
+        "market_date": "2026-09-22",
+        "open_price": "1.57",
+        "close_price": "1.57",
+        "low_price": "1.57",
+        "high_price": "1.57",
+        "avg_price": "1.57",
+        "avg_volume": "6251812764.5",
+        "avg_market_cap": "98759434608.5",
+        "change_24h_pct": "5.20469",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "bc227d39f7ad5208cdf18317f1f8b7bd",
+        "coin_id": "usd-coin",
+        "symbol": "usdc",
+        "coin_name": "USDC",
+        "market_date": "2026-09-22",
+        "open_price": "0.999925",
+        "close_price": "0.999909",
+        "low_price": "0.999909",
+        "high_price": "0.999925",
+        "avg_price": "0.999917",
+        "avg_volume": "22195349211.0",
+        "avg_market_cap": "74599248306.0",
+        "change_24h_pct": "0.003",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "ea7f2fe774bdeea730df6fa25ea6a356",
+        "coin_id": "solana",
+        "symbol": "sol",
+        "coin_name": "Solana",
+        "market_date": "2026-09-22",
+        "open_price": "117.32",
+        "close_price": "117.3",
+        "low_price": "117.3",
+        "high_price": "117.32",
+        "avg_price": "117.31",
+        "avg_volume": "5067827018.0",
+        "avg_market_cap": "68933050330.5",
+        "change_24h_pct": "-0.3441",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "d3d5fbeb1c0534c146385f65888a097f",
+        "coin_id": "tron",
+        "symbol": "trx",
+        "coin_name": "TRON",
+        "market_date": "2026-09-22",
+        "open_price": "0.341316",
+        "close_price": "0.341479",
+        "low_price": "0.341316",
+        "high_price": "0.341479",
+        "avg_price": "0.3413975",
+        "avg_volume": "615411889.5",
+        "avg_market_cap": "32420881567.0",
+        "change_24h_pct": "-1.10559",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "234d8ade4d1d66d46f349659e1209752",
+        "coin_id": "zcash",
+        "symbol": "zec",
+        "coin_name": "Zcash",
+        "market_date": "2026-09-22",
+        "open_price": "1538.53",
+        "close_price": "1538.67",
+        "low_price": "1538.53",
+        "high_price": "1538.67",
+        "avg_price": "1538.6",
+        "avg_volume": "1440268719.5",
+        "avg_market_cap": "26081361838.5",
+        "change_24h_pct": "2.72248",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      },
+      {
+        "crypto_daily_sk": "3af386e7a5bf30d3682ea32384ca82b9",
+        "coin_id": "figure-heloc",
+        "symbol": "figr_heloc",
+        "coin_name": "Figure Heloc",
+        "market_date": "2026-09-22",
+        "open_price": "1.006",
+        "close_price": "1.006",
+        "low_price": "1.006",
+        "high_price": "1.006",
+        "avg_price": "1.006",
+        "avg_volume": "48239680.0",
+        "avg_market_cap": "22903430602.5",
+        "change_24h_pct": "-3.22341",
+        "snapshot_count": "2",
+        "last_ingested_at": "2026-09-22 15:40:30.521300"
+      }
+    ],
+    "gold_weather_hourly": [
+      {
+        "weather_hour_sk": "569249c9605f4fb1520bb22f9e96e1bf",
+        "city": "Johannesburg",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "15.1",
+        "day_min_temp_c": "12.3",
+        "day_max_temp_c": "23.9",
+        "latitude": "-26.2",
+        "longitude": "28.04",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "50ef7b02572ddc825261ed230d9fa323",
+        "city": "London",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "15.0",
+        "day_min_temp_c": "15.0",
+        "day_max_temp_c": "22.6",
+        "latitude": "51.51",
+        "longitude": "-0.13",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "ab5bcf8a360e4563041f2dd7d8386319",
+        "city": "Tokyo",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "20.5",
+        "day_min_temp_c": "18.3",
+        "day_max_temp_c": "22.1",
+        "latitude": "35.68",
+        "longitude": "139.69",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "4dc72221cc65670e3eaae4d2e69288eb",
+        "city": "Dubai",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "28.1",
+        "day_min_temp_c": "28.1",
+        "day_max_temp_c": "39.9",
+        "latitude": "25.2",
+        "longitude": "55.27",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "697874a36f3911e4621887db2ff4f196",
+        "city": "Mumbai",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "25.2",
+        "day_min_temp_c": "25.0",
+        "day_max_temp_c": "29.9",
+        "latitude": "19.08",
+        "longitude": "72.88",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "d91ddef3b6a1452c4e21c5de67fe34eb",
+        "city": "Cairo",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "24.3",
+        "day_min_temp_c": "21.3",
+        "day_max_temp_c": "33.5",
+        "latitude": "30.04",
+        "longitude": "31.24",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "5c280d35db77f86f5c437e10455ac1f0",
+        "city": "Sydney",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "20.1",
+        "day_min_temp_c": "15.5",
+        "day_max_temp_c": "20.1",
+        "latitude": "-33.87",
+        "longitude": "151.21",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "b3197fe8c8b4d2f9b5f2be71f1ae9341",
+        "city": "Berlin",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "14.3",
+        "day_min_temp_c": "9.3",
+        "day_max_temp_c": "19.4",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "f95d44a37a2a49badc1a388c9ba9d9d7",
+        "city": "Paris",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "16.6",
+        "day_min_temp_c": "12.6",
+        "day_max_temp_c": "26.0",
+        "latitude": "48.86",
+        "longitude": "2.35",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      },
+      {
+        "weather_hour_sk": "8b336d4eacc39be2c6ad57b10865b7f0",
+        "city": "Delhi",
+        "hour_ts": "2026-09-23 23:00:00",
+        "temp_c": "25.9",
+        "day_min_temp_c": "25.9",
+        "day_max_temp_c": "36.1",
+        "latitude": "28.61",
+        "longitude": "77.21",
+        "source_run_id": "run-20260922-154029-102c87ce",
+        "ingested_at": "2026-09-22 15:40:31.319245"
+      }
+    ]
+  },
+  "table_counts": {
+    "bronze_crypto": 200,
+    "bronze_weather": 1920,
+    "silver_crypto": 200,
+    "silver_weather": 960,
+    "gold_crypto_daily": 100,
+    "gold_weather_hourly": 960,
+    "quarantine_crypto": 0,
+    "quarantine_weather": 0
+  }
+}
