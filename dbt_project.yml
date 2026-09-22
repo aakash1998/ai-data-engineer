@@ -1,0 +1,15 @@
+name: 'ai_data_engineer'
+version: '1.0.0'
+config-version: 2
+
+# The model layer of the AI Data Engineer pipeline.
+# Bronze ingestion stays in Python (build.py) — dbt owns silver + gold.
+profile: 'ai_data_engineer'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages", "logs"]
+
+models:
+  ai_data_engineer:
+    +materialized: table
