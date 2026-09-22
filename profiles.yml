@@ -1,0 +1,13 @@
+# dbt profiles. dev = the real warehouse; drill = per-fault sandbox DBs
+# (chaos.py sets DRILL_DUCKDB_PATH env var before invoking dbt).
+ai_data_engineer:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: warehouse/warehouse.duckdb
+      schema: main
+    drill:
+      type: duckdb
+      path: "{{ env_var('DRILL_DUCKDB_PATH') }}"
+      schema: main
