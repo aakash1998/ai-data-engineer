@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: >
+      Immutable raw loads. Python (build.py) appends each run's JSONL here;
+      dbt never writes to bronze.
+    schema: main
+    tables:
+      - name: bronze_crypto
+        description: Raw CoinGecko top-100 market snapshots, one row per coin per API pull.
+      - name: bronze_weather
+        description: Raw Open-Meteo hourly temperature_2m, one row per city per hour.
