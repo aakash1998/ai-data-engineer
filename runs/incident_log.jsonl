@@ -1,0 +1,2 @@
+{"timestamp": "2026-09-22T15:40:55.391997+00:00", "run_id": "drill-nullflood-20260922-154042", "severity": "high", "check": "not_null:silver_crypto.total_volume", "details": "30 rows with NULL total_volume; 30 quarantined"}
+{"timestamp": "2026-09-22T15:41:00.028492+00:00", "run_id": "drill-drift-20260922-154042", "severity": "warning", "check": "schema_drift", "details": "crypto: 'total_volume' renamed to 'volume_24h' on 40 records, new field 'fdv_v2' on 20 records \u2014 staging contract (COALESCE) applied"}
