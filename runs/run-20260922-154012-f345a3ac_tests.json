@@ -1,0 +1,75 @@
+{
+  "run_id": "run-20260922-154012-f345a3ac",
+  "results": [
+    {
+      "check": "not_null:silver_crypto.coin_id",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "not_null:silver_crypto.current_price",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "not_null:silver_crypto.total_volume",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "not_null:silver_weather.city",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "not_null:silver_weather.temperature_2m",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "unique:silver_crypto(coin_id+snapshot_ts)",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "unique:silver_weather(city+hour_ts)",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "accepted_values:silver_crypto.vs_currency",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "freshness:silver_crypto",
+      "status": "pass",
+      "details": "0.1h old"
+    },
+    {
+      "check": "freshness:silver_weather",
+      "status": "pass",
+      "details": "0.0h old"
+    },
+    {
+      "check": "row_count_anomaly:bronze_crypto",
+      "status": "skip",
+      "details": "only 1 run(s); need >= 2 for baseline"
+    },
+    {
+      "check": "row_count_anomaly:bronze_weather",
+      "status": "skip",
+      "details": "only 1 run(s); need >= 2 for baseline"
+    },
+    {
+      "check": "referential_integrity:gold_crypto_daily->silver_crypto",
+      "status": "pass",
+      "offending": 0
+    },
+    {
+      "check": "referential_integrity:gold_weather_hourly->silver_weather",
+      "status": "pass",
+      "offending": 0
+    }
+  ]
+}
